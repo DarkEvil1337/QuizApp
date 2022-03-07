@@ -1,3 +1,4 @@
 # QuizApp
 This is a project for testing application.
-Author - Sannie.
+Author - Daniil.
+https://quizapp-volkolakovs.herokuapp.com/
