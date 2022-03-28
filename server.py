@@ -16,3 +16,7 @@ def health():
 
 if __name__ == '__main__':
   app.run(debug="true")
+
+@app.route('/about')
+def about():
+  return render_template("about.html")
