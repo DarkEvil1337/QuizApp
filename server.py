@@ -1,3 +1,4 @@
+from inspect import Parameter
 from flask import Flask
 from flask import request
 from flask import render_template
@@ -14,9 +15,14 @@ def root():
 def health():
   return "OK"
 
-if __name__ == '__main__':
-  app.run(debug="true")
-
 @app.route('/about')
 def about():
   return render_template("about.html")
+
+@app.route('/test', methods=['POST', 'GET'])
+def test():
+    parametri = ["IQ","Augums","Kājas izmērs"]
+    return render_template("test.html",parametri=parametri)
+
+if __name__ == '__main__':
+  app.run(debug="true")
