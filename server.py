@@ -37,7 +37,7 @@ def about():
 @app.route('/test', methods=['POST', 'GET'])
 def test():
     parametri = ["IQ","Augums","Kājas izmērs"]
-    images = ["https://www.rd.com/wp-content/uploads/2021/01/GettyImages-1175550351.jpg","https://static01.nyt.com/images/2021/09/14/science/07CAT-STRIPES/07CAT-STRIPES-mediumSquareAt3X-v2.jpg","https://cdn.mos.cms.futurecdn.net/VSy6kJDNq2pSXsCzb6cvYF.jpg"] 
+    images = loadAllPicture()
     return render_template("test.html",parametri=parametri, images=images)
 
 if __name__ == '__main__':
