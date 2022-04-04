@@ -9,7 +9,7 @@ def loadAllPicture():
   filepath = 'picDB.txt'
   pictures=[]
   with open(filepath) as fp:
-    line =readline()
+    line =fp.readline()
     cnt=1
     while line:
       if line!='':
