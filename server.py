@@ -6,7 +6,7 @@ from flask import render_template
 app = Flask(__name__)
 
 def loadAllPicture():
-  filepath = 'pickdb.txt'
+  filepath = 'picDB.txt'
   pictures=[]
   with open(filepath) as fp:
     line =readline()
@@ -19,7 +19,7 @@ def loadAllPicture():
       cnt+=1
     fp.close()
     return pictures
-    
+
 #Pirmā lapa, kas tiks ielādēta
 @app.route('/',methods = ['POST', 'GET'])
 def root():
